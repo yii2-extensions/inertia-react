@@ -1,42 +1,36 @@
-# Development
+# Development notes
 
-This document describes development workflows and maintenance tasks for the project.
+## Scope
 
-## Sync Metadata
+This package is a thin adapter over `yii2-framework/inertia`.
 
-To keep configuration files synchronized with the latest template updates, use the `sync-metadata` command. This command
-downloads the latest configuration files from the template repository.
+It intentionally does not include.
 
-```bash
-composer sync-metadata
-```
+- React components for your application pages.
+- npm dependency installation.
+- SSR setup.
+- A replacement for classic Yii2 jQuery widgets.
 
-### Updated Files
+## Adapter responsibility
 
-This command updates the following configuration files:
+The PHP-side responsibility of this package is to connect the base Inertia server package with a React/Vite frontend
+by providing.
 
-| File               | Purpose                                      |
-| ------------------ | -------------------------------------------- |
-| `.editorconfig`    | Editor settings and code style configuration |
-| `.gitattributes`   | Git attributes and file handling rules       |
-| `.gitignore`       | Git ignore patterns and exclusions           |
-| `.styleci.yml`     | StyleCI code style analysis configuration    |
-| `infection.json5`  | Infection mutation testing configuration     |
-| `phpstan.neon`     | PHPStan static analysis configuration        |
-| `phpunit.xml.dist` | PHPUnit test configuration                   |
+- a React-oriented bootstrap class;
+- a root view that renders the page payload and asset tags;
+- a canonical `yii\inertia\Vite` helper (inherited from the base package) that understands the manifest and
+  development server modes;
+- a `reactRefreshPreambleProvider()` factory that ships the React Refresh preamble required by `@vitejs/plugin-react`
+  on traditional backends, wired to the `Vite::$preambleProvider` closure in development mode.
 
-### When to Run
+## Inertia v3 alignment
 
-Run this command in the following scenarios:
+The package assumes the v3-style initial page payload output via a `<script type="application/json">` element, which
+matches the current `yii2-framework/inertia` base package implementation.
 
-- **Periodic Updates** - Monthly or quarterly to benefit from template improvements.
-- **After Template Updates** - When the template repository has new configuration improvements.
-- **Before Major Releases** - Ensure your project uses the latest best practices.
-- **When Issues Occur** - If configuration files become outdated or incompatible.
+## Next steps
 
-### Important Notes
-
-- This command overwrites existing configuration files with the latest versions from the template.
-- Ensure you have committed any custom configuration changes before running this command.
-- Review the updated files after syncing to ensure they work with your specific project needs.
-- Some projects may require customizations after syncing configuration files.
+- 📚 [Installation Guide](installation.md)
+- ⚙️ [Configuration Reference](configuration.md)
+- 💡 [Usage Examples](examples.md)
+- 🧪 [Testing Guide](testing.md)
