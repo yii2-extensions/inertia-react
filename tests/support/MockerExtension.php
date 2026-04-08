@@ -16,7 +16,7 @@ use yii\inertia\react\tests\support\stub\MockerFunctions;
  *
  * Subscribes to PHPUnit's test lifecycle via {@see \PHPUnit\Runner\Extension\Facade} so a curated set of built-in
  * PHP functions (for example, `file_get_contents`) are redirected through {@see \Xepozz\InternalMocker\Mocker} and can
- * be deterministically controlled from {@see stub\MockerFunctions} during each test run.
+ * be deterministically controlled from {@see MockerFunctions} during each test run.
  *
  * @author Wilmer Arambula <terabytesoftw@gmail.com>
  * @since 0.1
@@ -56,9 +56,10 @@ final class MockerExtension implements Extension
     /**
      * Loads the internal-function mocks into {@see \Xepozz\InternalMocker\Mocker} and saves the resulting state.
      *
-     * Idempotent: safe to call multiple times across suite starts. The function stubs forward their arguments to the
-     * corresponding {@see MockerFunctions} hooks so individual tests can drive deterministic return values or
-     * exceptions through static toggles.
+     * Must be called exactly once during suite bootstrap. {@see \Xepozz\InternalMocker\Mocker::load()} uses
+     * `require_once` internally to include the generated mocks file, so subsequent invocations will not re-register
+     * mocks even if the definitions change. The function stubs forward their arguments to the {@see MockerFunctions}
+     * hooks so individual tests can drive deterministic return values or exceptions through static toggles.
      */
     public static function load(): void
     {
