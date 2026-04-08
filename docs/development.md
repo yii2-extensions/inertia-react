@@ -19,9 +19,9 @@ by providing.
 - a React-oriented bootstrap class;
 - a root view that renders the page payload and asset tags;
 - a canonical `yii\inertia\Vite` helper (inherited from the base package) that understands the manifest and
-    development server modes;
+  development server modes;
 - a `reactRefreshPreambleProvider()` factory that ships the React Refresh preamble required by `@vitejs/plugin-react`
-    on traditional backends, wired to the `Vite::$preambleProvider` closure in development mode.
+  on traditional backends, wired to the `Vite::$preambleProvider` closure in development mode.
 
 ## Inertia v3 alignment
 
