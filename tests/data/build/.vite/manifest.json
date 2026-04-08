@@ -1,0 +1,15 @@
+{
+    "_shared-M5n6O7p8.js": {
+        "file": "assets/shared-M5n6O7p8.js",
+        "name": "shared",
+        "css": ["assets/shared-P7qR8sT4.css"]
+    },
+    "resources/js/app.jsx": {
+        "file": "assets/app-A1b2C3d4.js",
+        "name": "app",
+        "src": "resources/js/app.jsx",
+        "isEntry": true,
+        "imports": ["_shared-M5n6O7p8.js"],
+        "css": ["assets/app-C9kL1mN2.css"]
+    }
+}
