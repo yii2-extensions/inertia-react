@@ -21,9 +21,9 @@ Add to your `composer.json`.
 
 ```json
 {
-    "require": {
-        "yii2-framework/inertia-react": "^0.1"
-    }
+  "require": {
+    "yii2-framework/inertia-react": "^0.1"
+  }
 }
 ```
 
@@ -63,34 +63,34 @@ at the project root.
 
 ```json
 {
-    "require": {
-        "php-forge/foxy": "^0.2",
-        "yii2-framework/inertia-react": "^0.1"
+  "require": {
+    "php-forge/foxy": "^0.2",
+    "yii2-framework/inertia-react": "^0.1"
+  },
+  "config": {
+    "allow-plugins": {
+      "php-forge/foxy": true
     },
-    "config": {
-        "allow-plugins": {
-            "php-forge/foxy": true
-        },
-        "foxy": {
-            "manager": "npm"
-        }
+    "foxy": {
+      "manager": "npm"
     }
+  }
 }
 ```
 
 ```json
 {
-    "private": true,
-    "type": "module",
-    "dependencies": {
-        "@inertiajs/react": "^2.0",
-        "react": "^19.0",
-        "react-dom": "^19.0"
-    },
-    "devDependencies": {
-        "@vitejs/plugin-react": "^6.0",
-        "vite": "^8.0"
-    }
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@inertiajs/react": "^2.0",
+    "react": "^19.0",
+    "react-dom": "^19.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.0",
+    "vite": "^8.0"
+  }
 }
 ```
 
