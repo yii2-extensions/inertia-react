@@ -15,7 +15,10 @@ namespace yii\inertia\react\tests\support\stub;
 final class MockerFunctions
 {
     /**
-     * Whether the next {@see file_get_contents()} invocation must return `false` to simulate an unreadable file.
+     * Whether {@see file_get_contents()} invocations must return `false` to simulate an unreadable file.
+     *
+     * Applies to every subsequent call until toggled back with {@see setFileGetContentsShouldFail()} or cleared by
+     * {@see reset()}.
      */
     private static bool $fileGetContentsShouldFail = false;
 

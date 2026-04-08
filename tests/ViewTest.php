@@ -74,6 +74,7 @@ final class ViewTest extends TestCase
             'Page payload should contain the passed props.',
         );
     }
+
     public function testThrowInvalidConfigExceptionWhenNonViteComponent(): void
     {
         $this->destroyApplication();

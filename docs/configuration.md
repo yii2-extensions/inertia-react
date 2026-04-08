@@ -34,6 +34,10 @@ return [
 
 ## Properties
 
+The `inertiaReact` component extends `yii\inertia\Vite` from the base Inertia package. Every property below except
+`preambleProvider` is inherited from that class; `preambleProvider` is the only option unique to this package and is
+wired automatically by `yii\inertia\react\Bootstrap`.
+
 ### `baseUrl`
 
 Base URL prefix for built assets referenced by the Vite manifest. Supports Yii aliases. Defaults to `@web/build`.
