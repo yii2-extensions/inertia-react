@@ -94,7 +94,7 @@ at the project root.
 }
 ```
 
-Then run:
+Then run.
 
 ```bash
 composer install

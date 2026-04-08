@@ -40,7 +40,7 @@ Base URL prefix for built assets referenced by the Vite manifest. Supports Yii a
 
 ### `devMode`
 
-When `true`, the component renders tags that point to the Vite dev server instead of reading the manifest. Defaults to 
+When `true`, the component renders tags that point to the Vite dev server instead of reading the manifest. Defaults to
 `false`.
 
 ### `devServerUrl`
@@ -66,7 +66,7 @@ Controls whether production mode should emit `modulepreload` tags for imported J
 ### `preambleProvider`
 
 A `Closure(string $devServerUrl): string` that returns an inline preamble script to emit before `@vite/client` in
-development mode. When unset (`null`), no preamble is emitted. 
+development mode. When unset (`null`), no preamble is emitted.
 
 Use `\yii\inertia\react\Bootstrap::reactRefreshPreambleProvider()` to wire the canonical React Refresh preamble required
 by `@vitejs/plugin-react` for traditional backends.

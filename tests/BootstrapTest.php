@@ -5,8 +5,10 @@ declare(strict_types=1);
 namespace yii\inertia\react\tests;
 
 use Yii;
+use yii\base\InvalidConfigException;
 use yii\inertia\{Manager, Vite};
 use yii\inertia\react\Bootstrap;
+use yii\inertia\react\tests\support\stub\MockerFunctions;
 use yii\web\Application;
 
 /**
@@ -108,5 +110,19 @@ final class BootstrapTest extends TestCase
             $manager->rootView,
             'Bootstrap should switch the default root view to the React-aware template.',
         );
+    }
+
+    public function testThrowInvalidConfigExceptionWhenReactRefreshPreambleAssetIsUnreadable(): void
+    {
+        MockerFunctions::setFileGetContentsShouldFail(true);
+
+        try {
+            $this->expectException(InvalidConfigException::class);
+            $this->expectExceptionMessage('Unable to read the bundled React Refresh preamble asset');
+
+            Bootstrap::reactRefreshPreambleProvider();
+        } finally {
+            MockerFunctions::setFileGetContentsShouldFail(false);
+        }
     }
 }

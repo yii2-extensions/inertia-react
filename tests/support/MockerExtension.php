@@ -62,14 +62,21 @@ final class MockerExtension implements Extension
      */
     public static function load(): void
     {
+        $fileGetContents = static fn(
+            string $filename,
+            mixed ...$args,
+        ): string|false => MockerFunctions::file_get_contents($filename, ...$args);
+
         $mocks = [
             [
                 'namespace' => 'yii\inertia',
                 'name' => 'file_get_contents',
-                'function' => static fn(
-                    string $filename,
-                    mixed ...$args,
-                ): string|false => MockerFunctions::file_get_contents($filename, ...$args),
+                'function' => $fileGetContents,
+            ],
+            [
+                'namespace' => 'yii\inertia\react',
+                'name' => 'file_get_contents',
+                'function' => $fileGetContents,
             ],
         ];
 

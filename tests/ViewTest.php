@@ -74,7 +74,7 @@ final class ViewTest extends TestCase
             'Page payload should contain the passed props.',
         );
     }
-    public function testThrowInvalidConfigExceptionForNonViteComponent(): void
+    public function testThrowInvalidConfigExceptionWhenNonViteComponent(): void
     {
         $this->destroyApplication();
 
@@ -106,7 +106,7 @@ final class ViewTest extends TestCase
         $this->setAbsoluteUrl('/dashboard');
         $this->expectException(InvalidConfigException::class);
         $this->expectExceptionMessage(
-        "The 'inertiaReact' application component must be an instance of " . Vite::class . '.',
+            "The 'inertiaReact' application component must be an instance of " . Vite::class . '.',
         );
 
         Inertia::render('Dashboard', ['stats' => ['visits' => 42]]);

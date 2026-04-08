@@ -48,8 +48,10 @@ final class MockerFunctions
     }
 
     /**
-     * Toggles whether the next {@see file_get_contents()} invocation must return `false` to simulate an unreadable
-     * file.
+     * Toggles whether {@see file_get_contents()} must return `false` to simulate an unreadable file.
+     *
+     * The flag applies to every subsequent invocation until it is toggled back with `$shouldFail = false` or cleared
+     * by {@see reset()}.
      *
      * @param bool $shouldFail `true` to simulate failure, or `false` to restore normal behavior.
      */

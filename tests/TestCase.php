@@ -51,18 +51,14 @@ abstract class TestCase extends \PHPUnit\Framework\TestCase
 
         $matches = [];
 
-        self::assertMatchesRegularExpression(
-            '/<script type="application\/json">(.*?)<\/script>/s',
-            (string) $response->content,
-            'HTML response should contain an inline JSON script with the page payload.',
-        );
-
-        preg_match('/<script type="application\/json">(.*?)<\/script>/s', (string) $response->content, $matches);
-
-        self::assertArrayHasKey(
+        self::assertSame(
             1,
-            $matches,
-            'Regex should match exactly one JSON script block.',
+            preg_match(
+                '/<script type="application\/json">(.*?)<\/script>/s',
+                (string) $response->content,
+                $matches,
+            ),
+            'HTML response should contain exactly one inline JSON script with the page payload.',
         );
 
         /** @phpstan-var array<string, mixed> */
