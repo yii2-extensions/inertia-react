@@ -13,9 +13,9 @@
  *
  * @see https://vite.dev/guide/backend-integration.html
  */
-import RefreshRuntime from '__VITE_DEV_SERVER_URL__/@react-refresh'
+import RefreshRuntime from "__VITE_DEV_SERVER_URL__/@react-refresh";
 
-RefreshRuntime.injectIntoGlobalHook(window)
-window.$RefreshReg$ = () => {}
-window.$RefreshSig$ = () => (type) => type
-window.__vite_plugin_react_preamble_installed__ = true
+RefreshRuntime.injectIntoGlobalHook(window);
+window.$RefreshReg$ = () => {};
+window.$RefreshSig$ = () => (type) => type;
+window.__vite_plugin_react_preamble_installed__ = true;
