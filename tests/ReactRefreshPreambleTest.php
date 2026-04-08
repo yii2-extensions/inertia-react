@@ -33,7 +33,7 @@ final class ReactRefreshPreambleTest extends TestCase
         $tags = $vite->renderTags();
 
         self::assertStringContainsString(
-            "import RefreshRuntime from 'http://localhost:5173/@react-refresh'",
+            'import RefreshRuntime from "http://localhost:5173/@react-refresh"',
             $tags,
             'Development mode must import the React Refresh runtime from the dev server URL substituted into the asset.',
         );
