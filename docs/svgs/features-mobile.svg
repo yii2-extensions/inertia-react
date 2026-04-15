@@ -1,75 +1,51 @@
 <!-- Mobile version - single column -->
-<svg fill="none" viewBox="0 0 600 560" width="100%" height="560" xmlns="http://www.w3.org/2000/svg">
-    <foreignObject width="100%" height="100%">
-        <div xmlns="http://www.w3.org/1999/xhtml">
-            <style>
-                .container {
-                    display: grid;
-                    grid-template-columns: 1fr;
-                    gap: 16px;
-                    padding: 16px;
-                }
-                .alert-box {
-                    border-left: 4px solid #61dafb;
-                    padding: 12px;
-                    margin-bottom: 12px;
-                    border-radius: 6px;
-                    background: rgba(97, 218, 251, 0.1);
-                    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-                    width: 100%;
-                    box-sizing: border-box;
-                }
-                .alert-title {
-                    margin: 0 0 8px 0;
-                    font-weight: 600;
-                    font-size: 14px;
-                }
-                .alert-content {
-                    margin: 0;
-                    line-height: 1.4;
-                    font-size: 12px;
-                }
+<svg viewBox="0 0 600 560" width="100%" height="560" xmlns="http://www.w3.org/2000/svg">
+    <style>
+        text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+        .box-bg { fill: #e6f8fd; stroke: #a9e1f2; stroke-width: 1; }
+        .title { font-weight: 700; font-size: 14px; fill: #1a202c; }
+        .content { font-size: 11px; fill: #4a5568; }
+    </style>
 
-                /* Light mode */
-                @media (prefers-color-scheme: light) {
-                    .alert-title { color: #000000; }
-                    .alert-content { color: #333333; }
-                    .alert-box { background: rgba(97, 218, 251, 0.1); }
-                }
+    <g>
+        <rect class="box-bg" x="16" y="16" width="568" height="78" rx="6"/>
+        <rect x="16" y="16" width="4" height="78" fill="#61dafb"/>
+        <text class="title" x="32" y="48">Battle Tested</text>
+        <text class="content" x="32" y="74">100% PHPUnit coverage &#8226; 100% Infection MSI &#8226; Super-Linter &#8226; StyleCI</text>
+    </g>
 
-                /* Dark mode */
-                @media (prefers-color-scheme: dark) {
-                    .alert-title { color: #ffffff; }
-                    .alert-content { color: #ffffff; }
-                    .alert-box { background: rgba(97, 218, 251, 0.18); }
-                }
-            </style>
-            <div class="container">
-                <div class="alert-box">
-                    <p class="alert-title"><strong>Battle Tested</strong></p>
-                    <p class="alert-content">100% PHPUnit coverage • 100% Infection MSI • Super-Linter • StyleCI</p>
-                </div>
-                <div class="alert-box">
-                    <p class="alert-title"><strong>Inertia v3</strong></p>
-                    <p class="alert-content">Deferred, merge, once props • Partial reloads • CSRF cookie-to-header</p>
-                </div>
-                <div class="alert-box">
-                    <p class="alert-title"><strong>PHP 8.2+</strong></p>
-                    <p class="alert-content">Strict types • Readonly props • Enums • PHPStan Level Max ready</p>
-                </div>
-                <div class="alert-box">
-                    <p class="alert-title"><strong>React Bootstrap</strong></p>
-                    <p class="alert-content">Drop-in Yii2 bootstrap class • React-aware root view • Inertia payload injection</p>
-                </div>
-                <div class="alert-box">
-                    <p class="alert-title"><strong>React Refresh</strong></p>
-                    <p class="alert-content">Canonical preamble for @vitejs/plugin-react • Opt-in via preambleProvider closure</p>
-                </div>
-                <div class="alert-box">
-                    <p class="alert-title"><strong>Vite Integration</strong></p>
-                    <p class="alert-content">Dev server tags • Manifest-driven production • modulepreload support</p>
-                </div>
-            </div>
-        </div>
-    </foreignObject>
+    <g>
+        <rect class="box-bg" x="16" y="106" width="568" height="78" rx="6"/>
+        <rect x="16" y="106" width="4" height="78" fill="#61dafb"/>
+        <text class="title" x="32" y="138">Inertia v3</text>
+        <text class="content" x="32" y="164">Deferred, merge, once props &#8226; Partial reloads &#8226; CSRF cookie-to-header</text>
+    </g>
+
+    <g>
+        <rect class="box-bg" x="16" y="196" width="568" height="78" rx="6"/>
+        <rect x="16" y="196" width="4" height="78" fill="#61dafb"/>
+        <text class="title" x="32" y="228">PHP 8.3+</text>
+        <text class="content" x="32" y="254">Strict types &#8226; Readonly props &#8226; Enums &#8226; PHPStan Level Max ready</text>
+    </g>
+
+    <g>
+        <rect class="box-bg" x="16" y="286" width="568" height="78" rx="6"/>
+        <rect x="16" y="286" width="4" height="78" fill="#61dafb"/>
+        <text class="title" x="32" y="318">React Bootstrap</text>
+        <text class="content" x="32" y="344">Drop-in Yii2 bootstrap class &#8226; React-aware root view &#8226; Inertia payload injection</text>
+    </g>
+
+    <g>
+        <rect class="box-bg" x="16" y="376" width="568" height="78" rx="6"/>
+        <rect x="16" y="376" width="4" height="78" fill="#61dafb"/>
+        <text class="title" x="32" y="408">React Refresh</text>
+        <text class="content" x="32" y="434">Canonical preamble for @vitejs/plugin-react &#8226; Opt-in via preambleProvider closure</text>
+    </g>
+
+    <g>
+        <rect class="box-bg" x="16" y="466" width="568" height="78" rx="6"/>
+        <rect x="16" y="466" width="4" height="78" fill="#61dafb"/>
+        <text class="title" x="32" y="498">Vite Integration</text>
+        <text class="content" x="32" y="524">Dev server tags &#8226; Manifest-driven production &#8226; modulepreload support</text>
+    </g>
 </svg>

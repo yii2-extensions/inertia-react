@@ -12,7 +12,7 @@ use yii\inertia\react\tests\support\stub\MockerFunctions;
 use yii\web\Response;
 
 /**
- * Base test case for yii2-framework/inertia-react tests.
+ * Base test case for inertia-react tests.
  *
  * @author Wilmer Arambula <terabytesoftw@gmail.com>
  * @since 0.1

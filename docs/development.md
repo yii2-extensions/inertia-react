@@ -2,7 +2,7 @@
 
 ## Scope
 
-This package is a thin adapter over `yii2-framework/inertia`.
+This package is a thin adapter over `yii2-extensions/inertia`.
 
 It intentionally does not include.
 
@@ -27,7 +27,7 @@ by providing.
 ## Inertia v3 alignment
 
 The package assumes the v3-style initial page payload output via a `<script type="application/json">` element, which
-matches the current `yii2-framework/inertia` base package implementation.
+matches the current `yii2-extensions/inertia` base package implementation.
 
 ## Next steps
 
