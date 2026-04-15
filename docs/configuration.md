@@ -2,7 +2,7 @@
 
 ## Overview
 
-`yii2-framework/inertia-react` provides a Vite asset helper registered as the `inertiaReact` application component.
+`yii2-extensions/inertia-react` provides a Vite asset helper registered as the `inertiaReact` application component.
 The bootstrap class registers it automatically when missing.
 
 ## Basic configuration

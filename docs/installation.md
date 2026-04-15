@@ -2,7 +2,7 @@
 
 ## System requirements
 
-- [PHP](https://www.php.net/downloads) `8.2` or higher.
+- [PHP](https://www.php.net/downloads) `8.3` or higher.
 - [Composer](https://getcomposer.org/download/) for dependency management.
 
 ## Installation
@@ -12,7 +12,7 @@
 Install the extension.
 
 ```bash
-composer require yii2-framework/inertia-react:^0.1
+composer require yii2-extensions/inertia-react:^0.1
 ```
 
 ### Method 2: Manual installation
@@ -22,7 +22,7 @@ Add to your `composer.json`.
 ```json
 {
   "require": {
-    "yii2-framework/inertia-react": "^0.1"
+    "yii2-extensions/inertia-react": "^0.1"
   }
 }
 ```
@@ -50,7 +50,7 @@ Do not register `yii\inertia\Bootstrap::class` separately. The React bootstrap a
 
 ## Application client-side dependencies
 
-`yii2-framework/inertia-react` only ships the PHP adapter. The React runtime, Inertia client, and Vite bundler live
+`yii2-extensions/inertia-react` only ships the PHP adapter. The React runtime, Inertia client, and Vite bundler live
 in the consuming application's `package.json`. There are two supported ways to install them.
 
 ### Option 1: `php-forge/foxy` (recommended)
@@ -65,7 +65,7 @@ at the project root.
 {
   "require": {
     "php-forge/foxy": "^0.2",
-    "yii2-framework/inertia-react": "^0.1"
+    "yii2-extensions/inertia-react": "^0.1"
   },
   "config": {
     "allow-plugins": {
@@ -116,8 +116,8 @@ Yarn, pnpm, and Bun are supported the same way.
 
 ## When not to install this package
 
-Do not install `yii2-framework/inertia-react` for applications that do not use React as their frontend framework. In
-that scenario, use `yii2-framework/inertia-vue` or `yii2-framework/inertia-svelte` instead.
+Do not install `yii2-extensions/inertia-react` for applications that do not use React as their frontend framework. In
+that scenario, use `yii2-extensions/inertia-vue` or `yii2-extensions/inertia-svelte` instead.
 
 ## Next steps
 

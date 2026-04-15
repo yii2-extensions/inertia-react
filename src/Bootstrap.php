@@ -13,7 +13,7 @@ use function sprintf;
 use function str_replace;
 
 /**
- * Bootstraps the React adapter for yii2-framework/inertia.
+ * Bootstraps the React adapter for inertia.
  *
  * Delegates the base Inertia bootstrap, registers the `@inertia-react` alias, registers the canonical
  * {@see \yii\inertia\Vite} renderer under the `inertiaReact` component id with a {@see $preambleProvider} closure that

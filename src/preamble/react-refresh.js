@@ -7,7 +7,7 @@
  * `__VITE_DEV_SERVER_URL__` placeholder.
  *
  * The `__VITE_DEV_SERVER_URL__` token is substituted at runtime by
- * {@link https://github.com/yii2-framework/inertia-react `yii\inertia\react\Bootstrap::reactRefreshPreambleProvider()`}
+ * {@link https://github.com/yii2-extensions/inertia-react `yii\inertia\react\Bootstrap::reactRefreshPreambleProvider()`}
  * with the resolved dev server URL (for example, `http://localhost:5173`) before the script is emitted inline in
  * the root view by `yii\inertia\Vite`.
  *
