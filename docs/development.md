@@ -89,15 +89,15 @@ If you change Vite's port, update `devServerUrl` in the PHP configuration to the
 - **Browser shows 404 or connection refused for `/@vite/client`** the page is rendering dev-server tags (`devMode`
   is `true`) but the Vite dev server is unreachable at `devServerUrl`. Confirm `npm run dev` is live and that the host and
   port match `devServerUrl`.
-- **No HMR, but the page loads normally** — `devMode` resolved to `false`, so the Vite helper rendered manifest tags
+- **No HMR, but the page loads normally** `devMode` resolved to `false`, so the Vite helper rendered manifest tags
   from `public/build/` and `/@vite/client` was never requested. Confirm that `YII_ENV=dev` reached the PHP process and
   that your configuration actually flips `inertiaReact.devMode` based on it.
-- **Port 5173 already in use** — free the port, or change Vite's `server.port` and the PHP `devServerUrl` to the new
-  value together. Mismatches silently break the page.
-- **Mixed-content warnings over HTTPS** — either terminate TLS in front of Yii2 with the same protocol on both sides and
+- **Port 5173 already in use** free the port, or change Vite's `server.port` and the PHP `devServerUrl` to the new value
+  together. Mismatches silently break the page.
+- **Mixed-content warnings over HTTPS** either terminate TLS in front of Yii2 with the same protocol on both sides and
   enable `server.https` in `vite.config.js`, or run both over plain HTTP during development.
-- **Stale assets after switching modes** — hard refresh the browser (Ctrl+Shift+R) after toggling `YII_ENV` so the
-  browser discards the previous module graph.
+- **Stale assets after switching modes** hard refresh the browser (Ctrl+Shift+R) after toggling `YII_ENV` so the browser
+  discards the previous module graph.
 
 ### Switching back to production
 
