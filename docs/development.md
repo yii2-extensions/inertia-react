@@ -104,7 +104,7 @@ If you change Vite's port, update `devServerUrl` in the PHP configuration to the
 ```bash
 # stop the Vite dev server, then:
 npm run build
-unset YII_ENV   # or: YII_ENV=prod
+unset YII_ENV   # or: export YII_ENV=prod
 ./yii serve
 ```
 
