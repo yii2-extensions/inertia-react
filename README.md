@@ -109,7 +109,7 @@ createInertiaApp({
 
 When `devMode` is `true` and `preambleProvider` is set to `\yii\inertia\react\Bootstrap::reactRefreshPreambleProvider()`,
 the Vite helper bypasses the production manifest and emits, in order: the React Refresh preamble, `@vite/client`,
-and each `entrypoints` script pointing at `devServerUrl`. Edits to `.jsx` files hot-reload without a full page refresh.
+and each `entrypoints` script pointing at `devServerUrl`. Edits to `.jsx` files are hot reloaded without a full page refresh.
 
 Run the Vite dev server and the Yii2 application side by side:
 
