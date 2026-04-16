@@ -107,9 +107,21 @@ createInertiaApp({
 
 ## Development mode and React Refresh
 
-When `devMode` is enabled and `preambleProvider` is set to
-`\yii\inertia\react\Bootstrap::reactRefreshPreambleProvider()`, this package emits the React Refresh preamble
-recommended by the official Vite backend integration guide before loading `@vite/client` and your entrypoint scripts.
+When `devMode` is `true` and `preambleProvider` is set to `\yii\inertia\react\Bootstrap::reactRefreshPreambleProvider()`,
+the Vite helper bypasses the production manifest and emits, in order: the React Refresh preamble, `@vite/client`,
+and each `entrypoints` script pointing at `devServerUrl`. Edits to `.jsx` files hot-reload without a full page refresh.
+
+Run the Vite dev server and the Yii2 application side by side:
+
+```bash
+# Terminal 1 — Vite dev server
+npm run dev
+
+# Terminal 2 — Yii2 in dev mode
+YII_ENV=dev ./yii serve
+```
+
+See [Development Notes](docs/development.md) for the full HMR workflow, CORS notes, and troubleshooting.
 
 ## Production asset integration
 
